@@ -1,0 +1,3 @@
+2016-02-20 16:45:44,942 - ABC - WARNING - warning message
+2016-02-20 16:45:44,943 - ABC - ERROR - error message
+2016-02-20 16:45:44,943 - ABC - CRITICAL - critical message
