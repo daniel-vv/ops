@@ -1,8 +1,12 @@
 #!/usr/bin/env python
-# _*_ coding:utf-8 _*_
+# -*- coding: utf-8 -*-
+print ('hello world')
+a = '1'
+c = '2'
 
-print('hello world')
+if a < c:
+    print ('a < c')
+else:
+    print ('a > c')
 
-
-for i in range(3):
-    print(i)
+print ('hello world!')
