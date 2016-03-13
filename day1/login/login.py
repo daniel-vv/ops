@@ -1,22 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#fuser = open('passwd','r')
-#fdeny = open('blanklist','r')
-#blanklist = blanklist
-list
-
-age = 18
-age.__divmod__()
-
 
 def deny_user(username):
     print('您的用户已被锁定,请联系管理员')
     f = open('blanklist','w+')
     f.write(username)
     f.close()
-
-for line in readlines:
 
 
 count = 0
