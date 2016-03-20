@@ -7,13 +7,13 @@ dic = {'k1':'v1','k2':'v2'}
 #print(dic['k1'])
 #print(dic['k2'])
 '''
-#print(dic.get('k1'))
+#print(dic.get('k1'))   #获取指定的key
 #print(dic.get('k2'))
-#print(dic.get('k3','haha'))
+#print(dic.get('k3','haha'))   #k3是不存在的,如果不指定后面的haha,则返回一个None空值,如果指定haha也就是说给k3赋了一个值
 '''
 print(dic.keys())
 print(dic.values())
-print(dic.items())
+print(dic.items())   #列出所有的key和键值对
 
 
 for k in dic.keys():
