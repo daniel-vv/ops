@@ -29,4 +29,5 @@ i = 23
 #result = i.imag  #虚数，没有意义
 #result = i.numerator  #分子=数字大小
 #result = i.real #实数，无意义
+result = i.__ceil__()
 print(result)
