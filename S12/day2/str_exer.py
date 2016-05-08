@@ -27,12 +27,12 @@ str = 'daniel'
 #result = s.isspace()  #是否是空格
 #result = s.istitle()  #是否是标题
 #result = s.isupper()   #是否大写
-# result = s.join(str)  #连接
+#result = s.join(str)  #连接
 #result = s.ljust(20,'#')  #左对齐,右侧填充
 #result = s.lower() #变小写
 #result = s.lstrip() #移除左侧空白
 #result = s.partition('and')  #分割,前中后三段,需要指定一个分割的符号或者字符,而且分割后会变成一个元组的类型
-#result = s.replace('and','or')  #替换
+#result = s.replace('and','or')  #替换字符串,其实是重新创建一个新的对象
 #result = s.split('and') #按照指定的字符分割,之后会变成一个列表类型
 #result = s.splitlines() #根据换行分割
 #result = s.startswith('t') #是否起始
@@ -46,8 +46,17 @@ str = 'daniel'
 #result = s.upper() #变大写
 #result = s.zfill(1) #返回指定长度的字符串,原来的字符串右对齐,前面填充0,如果指定少了,会返回原有的字符串
 #还有一个写rsplit, rstrip, rfind等从右往左匹配的方法,就不一一列举
+#result = s.rjust(20,'#')  #右对齐
+# __str__() 主要是给用户看的
+# __repr__() 主要是给python看的,而后还需要用eval()转回来
+
 
 print(result)
+
+#result2 = s.replace('and','or')
+#print(id(result2))
+
+
 '''
 print('Original string: ' + result)
 print('Default exapanded tab: ' + result.expandtabs())
