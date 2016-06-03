@@ -26,7 +26,7 @@ Github: https://github.com/daniel-vv/ops
     locked.db  黑名单文件(一行存放一个用户)
     locked.db.new  黑名单临时文件
     passwd  用户数据库文件
-        借鉴linux中/etc/passwd文件格式,共7个字段,中间用:分割,格式 admin:admin:/home/admin@gmail.com:/bin/bash:0:19011000099
+        借鉴linux中/etc/passwd文件格式,共7个字段,中间用:分割,格式 admin:admin:/home/admin:admin@gmail.com:/bin/bash:0:19011000099
         第一字段: 用户名(必填项)
         第二字段: 用户密码(必填项)
         第三字段: 用户家目录
