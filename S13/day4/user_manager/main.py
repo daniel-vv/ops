@@ -49,8 +49,8 @@ def valid_str(string):
     :param phone: 接受形式参数
     :return: True合法,False不合法
     '''
-    if len(string) > 2:
-        if re.match("^[a-zA-Z].[0-9a-zA-Z]$",string) != None:
+    if len(string) != 0:
+        if re.match("^[a-zA-Z][a-zA-Z0-9]{1,10}$",string) != None:
             return True
     return False
 
@@ -132,8 +132,8 @@ def registry_user():
     '''
     flag = False if not USER_STATUS['user_status'] else True
     Count = 0
-    if flag:
-        user_input = input('\033[31;1m{} 您已经登录了,确定退出登录么? y/Y\033[0m'.format(USER_STATUS['username'])).strip()
+    if flag and not USER_STATUS['user_type']: #如果是普通用户登录的状态下选择注册用户,
+        user_input = input('\033[31;1m{} 您已经登录了,但是普通用户无法添加用户,你可以尝试退出账户,而后注册一个用户, 确定退出登录么? y/Y\033[0m'.format(USER_STATUS['username'])).strip()
         if user_input == 'y' or user_input == 'Y':
             flag = False
             USER_STATUS['user_status'] = False  #在字典里将标志位置为否表示退出用户登录
@@ -141,6 +141,8 @@ def registry_user():
             if input('\033[31;1m您已退出登录,按下任意键继续...\033[0m'):pass
         else:
             return False,None
+    if flag and USER_STATUS['user_type']:  #如果用户已经登录,并且是管理员权限的话,直接添加用户
+        flag = False
     while not flag:
         username = input('输入一个个性的名字吧:\033[31;1m(必填项)\033[0m  ').strip()
         if not valid_str(username):
@@ -448,7 +450,7 @@ def print_fun():
         print('\033[32;1m欢迎 [%s] 来到用户管理系统\033[0m'.center(90,'#')%USER_STATUS['username'])
         print('''
             1. 登录系统
-            2. 注册用户
+            2. 添加用户
             3. 修改密码
             4. 查询用户
             5. 删除用户
